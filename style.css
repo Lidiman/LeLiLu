@@ -18,12 +18,34 @@
       --text-mid: #555555;
   }
 
+  html {
+      scroll-behavior: smooth;
+  }
+
   body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background: #fff;
       color: var(--text-dark);
       overflow-x: hidden;
   }
+
+  /* Smooth Animation Classes */
+  .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  /* Delay for multiple items */
+  .delay-1 { transition-delay: 0.1s; }
+  .delay-2 { transition-delay: 0.2s; }
+  .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; }
 
   a {
       text-decoration: none;
@@ -170,7 +192,7 @@
   /* PORTFOLIO */
   .portfolio-section {
       padding: 64px 64px 48px;
-      background: #fff;
+      background: linear-gradient(to bottom, var(--yellow) 0%, #fff 15%, #fff 100%);
   }
 
   .portfolio-masonry {
@@ -261,7 +283,7 @@
   /* TESTIMONI */
   .testimoni-section {
       padding: 56px 64px;
-      background: var(--yellow);
+      background: linear-gradient(to bottom, #fff 0%, var(--yellow) 15%, var(--yellow) 100%);
   }
 
   .testi-grid {
@@ -316,7 +338,7 @@
       align-items: center;
       gap: 0;
       padding: 64px 64px 64px 0;
-      background: #fff;
+      background: linear-gradient(to bottom, var(--yellow) 0%, #fff 15%, #fff 100%);
   }
 
   .about-anime {
@@ -419,7 +441,7 @@
 
   /* ADA APA AJA */
   .adaapa-section {
-      background: var(--yellow);
+      background: linear-gradient(to bottom, #fff 0%, var(--yellow) 15%, var(--yellow) 100%);
       padding: 56px 64px;
       display: flex;
       gap: 48px;
@@ -503,7 +525,7 @@
   /* MORE PORTFOLIO */
   .more-portfolio {
       padding: 64px 64px;
-      background: #fff;
+      background: linear-gradient(to bottom, var(--yellow) 0%, #fff 15%, #fff 100%);
   }
 
   .more-portfolio-grid {
@@ -546,7 +568,7 @@
   /* CREATOR */
   .creator-section {
       padding: 48px 64px 64px;
-      background: #fff;
+      background: linear-gradient(to bottom, #fff 0%, #fff 80%, var(--black) 100%);
   }
 
   .creator-scroll {
